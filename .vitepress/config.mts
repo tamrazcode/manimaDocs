@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 
-  title: "Manima Docs",
+  title: "Manima",
   description: "Manima Docs",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
