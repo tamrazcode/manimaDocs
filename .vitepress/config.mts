@@ -12,7 +12,6 @@ export default defineConfig({
   themeConfig: {
     outline: {
           label: 'Содержание',
-          level: [2, 3] // (Опционально) Показывать заголовки h2 и h3
         },
     logo: '/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
