@@ -5,6 +5,9 @@ export default defineConfig({
 
   title: "Manima",
   description: "Manima Docs",
+  head: [
+      ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
