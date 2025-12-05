@@ -1,0 +1,21 @@
+:root {
+  /* Основной цвет (Brand Color) */
+  --vp-c-brand-1: #8b5cf6; /* Ярко-фиолетовый */
+  --vp-c-brand-2: #7c3aed; /* Чуть темнее (для наведения) */
+  --vp-c-brand-3: #6d28d9; /* Еще темнее (для активного состояния) */
+
+  /* Цвет фона для "мягких" кнопок (например, вторичных) */
+  --vp-c-brand-soft: rgba(139, 92, 246, 0.14);
+  
+  /* Цвет кнопок "Главная" на темной теме */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+}
+
+/* Это чтобы градиент в заголовке на главной был красивым */
+.VPHomeHero .name {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--vp-home-hero-name-color);
+  background-image: var(--vp-home-hero-name-background);
+}
