@@ -5,6 +5,7 @@ export default defineConfig({
 
   title: "Manima",
   description: "Manima Docs",
+  cleanUrls: true,
   head: [
       ['link', { rel: 'icon', href: '/favicon.ico' }],
     ],
