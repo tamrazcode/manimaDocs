@@ -73,3 +73,87 @@
 
 .VPButton[href="#copy"]:hover::before { transform: translateY(100%); }
 .VPButton[href="#copy"]:hover::after { top: 0; }
+
+/* --- УВЕЛИЧЕНИЕ КАРТИНКИ НА ГЛАВНОЙ --- */
+.VPHomeHero .image-src {
+  max-width: 450px !important; 
+  max-height: 450px !important;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .VPHomeHero .image-src {
+    max-width: 280px !important;
+    max-height: 280px !important;
+    transform: translateX(0px); 
+  }
+}
+
+/* --- ИСПРАВЛЕНИЕ ЛИНИИ ФУТЕРА --- */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider) !important;
+
+  background-color: transparent !important;
+}
+
+/* --- СУПЕР ПЛАВНЫЕ СПОЙЛЕРЫ --- */
+
+details {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: var(--vp-c-bg-soft);
+  overflow: hidden; /* Обязательно */
+  
+  /* Анимация высоты */
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+  
+  /* Начальная высота (только заголовок) */
+  /* Примерно 50px, зависит от шрифта. Если заголовок в 2 строки, ставь 70px */
+  max-height: 80px; 
+}
+
+details[open] {
+  /* Конечная высота. Ставим с запасом. 
+     Если контента очень много, ставь 2000px.
+     Анимация будет идти до реальной высоты контента */
+  max-height: 2000px;
+  
+  /* Меняем кривую анимации для открытия */
+  transition: max-height 2s ease-in-out;
+  
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-mute);
+}
+
+details summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+details summary::-webkit-details-marker { display: none; }
+
+/* Плавное появление текста внутри */
+details[open] > *:not(summary) {
+  animation: fade-slide-in 0.4s ease forwards;
+}
+
+@keyframes fade-slide-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+details p, details .details-content {
+  padding: 16px;
+  margin: 0 !important;
+}
+
+/* Разрешаем онлайну встать рядом с кнопками */
+.VPHomeHero .actions {
+  position: relative; /* Теперь онлайн будет отсчитываться от кнопок */
+}
