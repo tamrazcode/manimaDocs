@@ -32,6 +32,7 @@ export default defineConfig({
     logo: '/logo.svg',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
+      { text: 'Главная', link: '/' },
       { text: 'Википедия', link: '/wiki/' },
       { text: 'Галерея', link: '/gallery/' },
       { text: 'Магазин', link: 'https://shop.gokota.ru', target: '_blank' }

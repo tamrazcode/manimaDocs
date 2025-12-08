@@ -9,7 +9,7 @@ const initTilt = () => {
   nextTick(() => {
     // Ждем чуть дольше, чтобы Vue успел отрисовать карточки
     setTimeout(() => {
-      const cards = document.querySelectorAll('.VPFeature, .VPTeamMembersItem')
+      const cards = document.querySelectorAll('.VPFeature, .VPTeamMembersItem, .step-card')
       if (cards.length > 0) {
         VanillaTilt.init(Array.from(cards), {
           max: 10,
@@ -35,7 +35,7 @@ watch(() => route.path, () => {
 })
 
 onUnmounted(() => {
-  const cards = document.querySelectorAll('.VPFeature, .VPTeamMembersItem')
+  const cards = document.querySelectorAll('.VPFeature, .VPTeamMembersItem, .step-card')
   cards.forEach(card => card.vanillaTilt && card.vanillaTilt.destroy())
 })
 </script>

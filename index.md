@@ -77,14 +77,14 @@ features:
 <div class="step-card">
     <div class="step-number">3</div>
     <h3>Добавь сервер</h3>
-    <p>Копируй IP <code>mc.manima.ru</code> и скорее присоединяйся к приключениям.</p>
+    <p>Копируй IP <code><a href="#copy" class="ip-copy-badge">mc.manima.ru</a></code> и скорее присоединяйся к приключениям.</p>
 </div>
 
 </div>
 </div>
 
 <style>
-/* Отступы для всего блока */
+/* Отступы для всего блока */ 
 .quick-start-container {
 margin-top: 80px;  /* Отступ от features */
 margin-bottom: 80px; /* Отступ до FAQ */
