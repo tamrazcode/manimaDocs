@@ -75,7 +75,7 @@ onMounted(fetchOnline)
 }
 
 /* На планшетах и ПК ставим СПРАВА от кнопок */
-@media (min-width: 640px) {
+@media (min-width: 960px) {
   .server-status {
     /* Вырываем из потока и ставим руками */
     position: absolute; 

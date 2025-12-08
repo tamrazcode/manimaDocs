@@ -51,7 +51,7 @@ onUnmounted(() => {
   transform: translate(-50%, -50%);
   pointer-events: none; /* Чтобы можно было кликать сквозь него */
   z-index: 9999;
-  transition: width 0.2s, height 0.2s; /* Анимация при кликах если захочешь */
+  transition: width 1s, height 0.9s; /* Анимация при кликах если захочешь */
 }
 
 /* Эффект свечения на фоне */
@@ -60,7 +60,7 @@ onUnmounted(() => {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, var(--vp-c-brand-1) 0%, transparent 70%);
-  opacity: 0.07; /* Очень слабое свечение */
+  opacity: 0.09; /* Очень слабое свечение */
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 0; /* На самом дне, под текстом */

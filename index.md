@@ -56,7 +56,7 @@ import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: 'https://minotar.net/helm/tamraz/100.png',
+    avatar: 'https://mc-heads.net/head/tamraz/100',
     name: 'tamraz',
     title: 'Основатель • Разработчик',
     desc: 'Человек, который написал немного кода и придумал этот мир.',
@@ -66,10 +66,13 @@ const members = [
     ]
   },
   {
-    avatar: 'https://minotar.net/helm/Steve/100.png',
-    name: 'Anonim',
-    title: 'Модератор',
-    desc: 'Следит за порядком, пока создатель спит.'
+    avatar: 'https://mc-heads.net/head/weeje/100',
+    name: 'weeje',
+    title: 'Главный администратор',
+    desc: 'Лучший из всех. Лучший во всём.<br>Мастер посхалок.',
+      links: [
+        { icon: 'discord', link: 'https://discord.com/users/weejec' }
+      ]
   }
 ]
 </script>
