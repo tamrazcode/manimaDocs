@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  appearance: 'dark', 
 
   title: "Manima",
   description: "Manima Docs",
@@ -10,6 +11,21 @@ export default defineConfig({
       ['link', { rel: 'icon', href: '/favicon.ico' }],
     ],
   themeConfig: {
+    search: {
+          provider: 'local',
+          options: {
+            translations: {
+              button: { buttonText: 'Поиск', buttonAriaLabel: 'Поиск' },
+              modal: { displayDetails: 'Подробнее', resetButtonTitle: 'Сбросить', backButtonTitle: 'Закрыть', noResultsText: 'Ничего не найдено', footer: { selectText: 'выбрать', navigateText: 'перемещаться', closeText: 'закрыть' } }
+            }
+          }
+        },
+        notFound: {
+              title: 'СТРАНИЦА НЕ НАЙДЕНА',
+              quote: 'Кажется, вы забрели в Далекие Земли. Тут ничего нет.',
+              linkLabel: 'Вернуться на спавн',
+              linkText: 'Вернуться на спавн'
+            },
     outline: {
           label: 'Содержание',
         },
@@ -17,6 +33,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Википедия', link: '/wiki/' },
+      { text: 'Галерея', link: '/gallery/' },
       { text: 'Магазин', link: 'https://shop.gokota.ru', target: '_blank' }
     ],
 
@@ -41,7 +58,8 @@ export default defineConfig({
               { text: 'ℹ️ О сервере', link: '/info/about' },
               { text: '💰 Экономика', link: '/info/economy' },
               { text: '👑 Привилегии', link: '/info/ranks' },
-              { text: '🎁 Ежедневные награды', link: '/info/rewards' }
+              { text: '🎁 Ежедневные награды', link: '/info/rewards' },
+              { text: '🖼️ Галерея', link: '/gallery' } 
             ]
           },
           {
@@ -69,7 +87,7 @@ export default defineConfig({
       { icon: 'telegram', link: 'https://discord.com/invite/ktRjwkR7yp' }
     ],
     footer: {
-      message: '2025-2026 © Manima — Твой любимый сервер.<br>Авторские права на Minecraft принадлежат Mojang Studios и никак не связаны с Manima.',
+      message: '2025-2026 © От игроков для игроков.<br>Авторские права на Minecraft принадлежат Mojang Studios и никак не связаны с Manima.',
       copyright: ''
     }
   }

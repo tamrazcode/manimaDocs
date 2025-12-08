@@ -73,11 +73,18 @@
 .VPButton[href="#copy"]:hover::before { transform: translateY(100%); }
 .VPButton[href="#copy"]:hover::after { top: 0; }
 
+/* --- 2. ФИКС ГАЛЕРЕИ (ЧТОБЫ КАРТИНКА БЫЛА ПОВЕРХ ВСЕГО) --- */
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 10000 !important; /* Ставим выше, чем навбар (у него обычно 20-50) */
+}
+
 /* --- УВЕЛИЧЕНИЕ КАРТИНКИ НА ГЛАВНОЙ --- */
 .VPHomeHero .image-src {
-  max-width: 600px !important; 
+  max-width: 700px !important; 
+  max-height: 700px !important;
   transition: transform 1s ease;
-  transform: translate(-180px, -120px);
+  transform: translate(-306px, -300px);
 }
 
 @media (max-width: 1385px) {
@@ -183,17 +190,24 @@ details p, details .details-content {
   /* Карточки (Features) тоже нужно растянуть */
   .VPHome .VPFeatures {
     max-width: 100% !important;
-    padding: 0 24px !important;
+    padding: 0 100px !important;
   }
   
-  /* Делаем сетку карточек шире */
   .VPFeatures .items {
     max-width: 100% !important;
-    /* Если карточек много, можно сделать 4 в ряд на очень больших экранах */
-    /* grid-template-columns: repeat(4, 1fr) !important; */ 
   }
 }
 
-/* ВАЖНО: Для статей (Вики) ширину лучше НЕ трогать, 
-   иначе текст будет слишком длинным и неудобным для чтения. 
-   Этот код выше влияет только на класс .VPHome (Главная). */
+/* --- ЛОГИКА НАСТРОЕК САЙТА --- */
+
+/* Если включен класс no-snow, скрываем контейнер снега */
+body.no-snow .snow-container {
+  display: none !important;
+}
+
+/* Если включен класс no-cursor, скрываем кастомный курсор и его свечение */
+body.no-cursor .custom-cursor,
+body.no-cursor .cursor-glow {
+  display: none !important;
+}
+

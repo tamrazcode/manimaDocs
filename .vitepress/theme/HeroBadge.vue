@@ -31,7 +31,7 @@
   
   color: #ffffff;
   
-  background-color: rgb(84, 19, 49);
+  background-color: rgb(135, 41, 83);
   
   border: 1px solid rgba(244, 114, 182, 0.3); 
   
