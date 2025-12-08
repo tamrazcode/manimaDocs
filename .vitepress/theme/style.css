@@ -1,0 +1,75 @@
+:root {
+  /* --- ПАСТЕЛЬНО-РОЗОВАЯ ТЕМА --- */
+  
+  /* Основной цвет (Нежный розовый) - Кнопки, ссылки */
+  --vp-c-brand-1: #f472b6; 
+  
+  /* При наведении (Чуть насыщеннее) */
+  --vp-c-brand-2: #ec4899; 
+  
+  /* При нажатии (Темно-розовый) */
+  --vp-c-brand-3: #db2777;
+
+  /* Мягкий фон (для подсветки в меню и фона плашек) */
+  --vp-c-brand-soft: rgba(244, 114, 182, 0.14);
+
+  /* --- СТЕКЛО В ХЕДЕРЕ (Оставляем, раз нравилось) --- */
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.6);
+}
+
+.dark {
+  --vp-nav-bg-color: rgba(27, 27, 31, 0.6);
+}
+
+.VPNavBar {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* Градиент для заголовка тоже подгоним под пастель */
+.VPHomeHero .name {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(120deg, #f472b6 30%, #c084fc); /* Розовый -> Сиреневый */
+}
+
+/* --- АНИМАЦИЯ КНОПКИ COPY IP (Оставляем, она была крутой) --- */
+.VPButton[href="#copy"] {
+  position: relative;
+  overflow: hidden;
+  color: transparent !important;
+}
+
+.VPButton[href="#copy"]::before {
+  content: 'Скопировать IP';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vp-button-alt-text);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.VPButton[href="#copy"]::after {
+  content: 'mc.manima.ru';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--vp-c-brand-1); /* Теперь будет пастельно-розовым */
+  font-weight: bold;
+  transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.VPButton[href="#copy"]:hover::before { transform: translateY(100%); }
+.VPButton[href="#copy"]:hover::after { top: 0; }
