@@ -138,7 +138,7 @@ border-color: var(--vp-c-brand-1); /* Твой розовый цвет */
 .step-number {
 width: 50px;
 height: 50px;
-background: var(--vp-c-brand-2);
+background: var(--vp-c-brand-3);
 color: white;
 font-size: 24px;
 font-weight: 800;
@@ -147,7 +147,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin: 0 auto 20px auto;
-box-shadow: 0 4px 15px rgba(244, 114, 182, 0.4); /* Розовая тень */
 }
 
 .step-card h3 {
@@ -167,6 +166,12 @@ color: var(--vp-c-brand-1);
 font-weight: bold;
 }
 </style>
+
+<script setup>
+import ModpackCard from './.vitepress/theme/ModpackCard.vue' // <--- 1. Импортируем
+</script>
+
+<ModpackCard />
 
 
 <!--<h2 class="section-title2">Часто задаваемые вопросы</h2>

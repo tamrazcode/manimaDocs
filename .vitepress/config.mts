@@ -60,7 +60,8 @@ export default defineConfig({
               { text: '💰 Экономика', link: '/info/economy' },
               { text: '👑 Привилегии', link: '/info/ranks' },
               { text: '🎁 Ежедневные награды', link: '/info/rewards' },
-              { text: '🖼️ Галерея', link: '/gallery' } 
+              { text: '🖼️ Галерея', link: '/gallery' },
+              { text: '📦 Наш модпак', link: '/info/modpack' }
             ]
           },
           {
