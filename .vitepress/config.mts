@@ -85,7 +85,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'discord', link: 'https://discord.com/invite/ktRjwkR7yp' },
-      { icon: 'telegram', link: 'https://discord.com/invite/ktRjwkR7yp' }
+      { icon: 'telegram', link: 'https://t.me/manimaru' }
     ],
     footer: {
       message: '2025-2026 © От игроков для игроков.<br>Авторские права на Minecraft принадлежат Mojang Studios и никак не связаны с Manima.',
