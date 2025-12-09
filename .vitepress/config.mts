@@ -35,7 +35,7 @@ export default defineConfig({
       { text: 'Главная', link: '/' },
       { text: 'Википедия', link: '/wiki/' },
       { text: 'Галерея', link: '/gallery/' },
-      { text: 'Магазин', link: 'https://shop.gokota.ru', target: '_blank' }
+      { text: 'Магазин', link: 'https://shop.manima.ru', target: '_blank' }
     ],
 
     // Боковое меню
