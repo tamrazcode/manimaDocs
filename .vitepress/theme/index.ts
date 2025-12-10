@@ -31,7 +31,9 @@ export default {
       
       'home-hero-actions-after': () => h(ServerStatus),
 
-      'sidebar-nav-after': () => h(DiscordWidget)
+      'sidebar-nav-after': () => h(DiscordWidget),
+    
+      
     })
   }
 }

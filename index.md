@@ -53,6 +53,8 @@ features:
     link: https://discord.gg/manima
 ---
 
+<CommunityBlock />
+
 
 <div class="quick-start-container">
 <h2 class="section-title">⚡ Как начать играть?</h2>
@@ -168,7 +170,8 @@ font-weight: bold;
 </style>
 
 <script setup>
-import ModpackCard from './.vitepress/theme/ModpackCard.vue' // <--- 1. Импортируем
+import ModpackCard from './.vitepress/theme/ModpackCard.vue'
+import CommunityBlock from './.vitepress/theme/CommunityBlock.vue'
 </script>
 
 <ModpackCard />
