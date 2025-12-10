@@ -242,11 +242,11 @@ p {
   position: relative;
   z-index: 2;
   transition: transform 0.3s;
-  transform: translateX(60px); 
+  transform: translateX(20px); 
 }
 .character-img:hover { 
     transform: scale(1.05); 
-    transform: translateX(60px) scale(1.05);
+    transform: translateX(20px) scale(1.05);
 }
 
 .back-glow {
@@ -290,14 +290,14 @@ p {
 }
 
 .b2 {
-  top: 45%; right: 5%;
-  background: rgba(59, 130, 246, 0.15); color: #60a5fa;
+  top: 53%; right: 20%;
+  background: rgba(59, 130, 246, 0.15); color: #5ea6ff;
   border-color: rgba(59, 130, 246, 0.3);
   animation-delay: 2s;
 }
 
 .b3 {
-  bottom: 15%; left: 15%;
+  bottom: 5%; left: 15%;
   background: rgba(234, 179, 8, 0.15); color: #facc15;
   border-color: rgba(234, 179, 8, 0.3);
   animation-delay: 4s;
