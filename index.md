@@ -53,43 +53,11 @@ features:
     link: https://discord.gg/manima
 ---
 
-<CommunityBlock />
-
-
-<div class="quick-start-container">
-<h2 class="section-title">⚡ Как начать играть?</h2>
-
-<div class="steps-grid">
-
-<!-- Шаг 1 -->
-<div class="step-card">
-    <div class="step-number">1</div>
-    <h3>Ознакомься с правилами</h3>
-    <p>Мы стремимся создать безопасное и приятное место для общения и игры.</p>
-</div>
-
-<!-- Шаг 2 -->
-<div class="step-card">
-    <div class="step-number">2</div>
-    <h3>Скачай майнкрафт</h3>
-    <p>Можно играть без лицензии и на любом лаунчере версии <strong>1.21+.</strong></p>
-</div>
-
-<!-- Шаг 3 -->
-<div class="step-card">
-    <div class="step-number">3</div>
-    <h3>Добавь сервер</h3>
-    <p>Копируй IP <code><a href="#copy" class="ip-copy-badge">mc.manima.ru</a></code> и скорее присоединяйся к приключениям.</p>
-</div>
-
-</div>
-</div>
 
 <style>
-/* Отступы для всего блока */ 
 .quick-start-container {
-margin-top: 80px;  /* Отступ от features */
-margin-bottom: 80px; /* Отступ до FAQ */
+margin-top: 80px; 
+margin-bottom: 80px;
 padding: 0 24px;
 }
 
@@ -172,9 +140,14 @@ font-weight: bold;
 <script setup>
 import ModpackCard from './.vitepress/theme/ModpackCard.vue'
 import CommunityBlock from './.vitepress/theme/CommunityBlock.vue'
+import VoteBlock from './.vitepress/theme/VoteBlock.vue'
+import HomeSteps from './.vitepress/theme/HomeSteps.vue'
 </script>
 
+<CommunityBlock />
+<HomeSteps />
 <ModpackCard />
+<VoteBlock />
 
 
 <!--<h2 class="section-title2">Часто задаваемые вопросы</h2>

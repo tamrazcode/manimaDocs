@@ -103,7 +103,7 @@
 }
 
 .badge.new {
-  background: var(--vp-c-brand-3);
+  background: var(--vp-c-brand-1);
   color: white;
 }
 

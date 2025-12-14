@@ -61,7 +61,8 @@ export default defineConfig({
               { text: '👑 Привилегии', link: '/info/ranks' },
               { text: '🎁 Ежедневные награды', link: '/info/rewards' },
               { text: '🖼️ Галерея', link: '/gallery' },
-              { text: '📦 Наш модпак', link: '/info/modpack' }
+              { text: '📦 Наш модпак', link: '/info/modpack' },
+              { text: '🗳️ Голосование', link: 'info/vote' }
             ]
           },
           {

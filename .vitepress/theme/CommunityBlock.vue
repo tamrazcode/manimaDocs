@@ -283,7 +283,7 @@ p {
 .icon { font-size: 18px; }
 
 .b1 {
-  top: 20%; left: 10%;
+  top: 20%; left: 5%;
   background: rgba(244, 114, 182, 0.15); color: #f472b6;
   border-color: rgba(244, 114, 182, 0.3);
   animation-delay: 0s;
