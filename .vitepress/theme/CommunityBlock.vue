@@ -1,13 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-// 1. ТВОЯ КАРТИНКА (Если файл лежит в public/images/skin.png)
-// const skinUrl = '/images/skin.png' 
 
-// Или оставь ссылку, если пока своей нет:
 const skinUrl = '/images/hero-skin.png'
 
-// 2. БАНК ФРАЗ (Можешь добавлять свои)
 const phrasesPool = [
   { icon: '💍', text: 'Свадьбы' },
   { icon: '🛡️', text: 'Без вайпов' },
@@ -23,18 +19,14 @@ const phrasesPool = [
   { icon: '☕', text: 'Напитки' }
 ]
 
-// Переменная для 3-х выбранных баджей (по умолчанию ставим заглушки)
 const currentBadges = ref([
   { icon: '✨', text: 'Загрузка...' },
   { icon: '✨', text: 'Загрузка...' },
   { icon: '✨', text: 'Загрузка...' }
 ])
 
-// Функция перемешивания и выбора
 onMounted(() => {
-  // Перемешиваем массив случайным образом
   const shuffled = [...phrasesPool].sort(() => 0.5 - Math.random())
-  // Берем первые 3 штуки
   currentBadges.value = shuffled.slice(0, 3)
 })
 </script>
@@ -43,7 +35,6 @@ onMounted(() => {
   <div class="community-wrapper">
     <div class="community-card">
       
-      <!-- ЛЕВАЯ ЧАСТЬ: Текст -->
       <div class="text-side">
         <h2>Мы ценим именно тебя</h2>
         <p>
@@ -52,7 +43,6 @@ onMounted(() => {
         </p>
         
         <div class="stats-grid">
-                  <!-- Карточка 1 -->
                   <div class="stat-card">
                     <div class="stat-icon">🌍</div>
                     <div class="stat-text">
@@ -61,7 +51,6 @@ onMounted(() => {
                     </div>
                   </div>
                   
-                  <!-- Карточка 2 -->
                   <div class="stat-card">
                     <div class="stat-icon">⚡</div>
                     <div class="stat-text">
@@ -72,23 +61,18 @@ onMounted(() => {
                 </div>
       </div>
 
-      <!-- ПРАВАЯ ЧАСТЬ -->
       <div class="visual-side">
         <img :src="skinUrl" class="character-img" alt="Character" />
         
-        <!-- Баджики берут данные из переменной currentBadges -->
         
-        <!-- 1. Розовый (Слева сверху) -->
         <div class="floating-badge b1">
           <span class="icon">{{ currentBadges[0].icon }}</span> {{ currentBadges[0].text }}
         </div>
 
-        <!-- 2. Синий (Справа) -->
         <div class="floating-badge b2">
           <span class="icon">{{ currentBadges[1].icon }}</span> {{ currentBadges[1].text }}
         </div>
 
-        <!-- 3. Желтый (Слева снизу) -->
         <div class="floating-badge b3">
           <span class="icon">{{ currentBadges[2].icon }}</span> {{ currentBadges[2].text }}
         </div>
@@ -162,19 +146,17 @@ p {
   max-width: 500px;
 }
 
-/* --- НОВАЯ СТАТИСТИКА --- */
 .stats-grid {
   display: flex;
   gap: 20px;
   margin-top: 40px;
-  /* Убрали border-top */
 }
 
 .stat-card {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: var(--vp-c-bg-soft); /* Мягкий фон */
+  background: var(--vp-c-bg-soft);
   padding: 12px 20px;
   border-radius: 16px;
   border: 1px solid var(--vp-c-divider);
@@ -183,7 +165,7 @@ p {
 
 .stat-card:hover {
   transform: translateY(-3px);
-  border-color: var(--vp-c-brand-1); /* Розовая обводка при наведении */
+  border-color: var(--vp-c-brand-1);
 }
 
 .stat-icon {
@@ -218,10 +200,9 @@ p {
   letter-spacing: 0.5px;
 }
 
-/* Адаптив для телефонов */
 @media (max-width: 480px) {
   .stats-grid {
-    flex-direction: column; /* Карточки друг под другом */
+    flex-direction: column;
     width: 100%;
   }
 }
@@ -276,7 +257,6 @@ p {
   backdrop-filter: blur(10px);
   animation: float 6s ease-in-out infinite;
   
-  /* Плавное появление текста при смене */
   transition: all 0.5s;
 }
 

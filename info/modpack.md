@@ -70,7 +70,6 @@
 :::
 
 <style>
-/* Красивая сетка карточек */
 .mod-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,7 +108,6 @@
   line-height: 1.5;
 }
 
-/* Кнопка в тексте */
 .btn-download {
   background: var(--vp-c-brand-1);
   color: white !important;

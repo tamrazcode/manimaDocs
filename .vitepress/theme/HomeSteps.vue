@@ -7,21 +7,18 @@
     
     <div class="steps-grid">
       
-      <!-- Шаг 1 -->
       <div class="step-card">
         <div class="step-number">1</div>
         <h3>Ознакомься с правилами</h3>
         <p>Мы стремимся создать безопасное место для общения и игры.</p>
       </div>
 
-      <!-- Шаг 2 -->
       <div class="step-card">
         <div class="step-number">2</div>
         <h3>Скачай майнкрафт</h3>
         <p>Можно играть без лицензии и на любом лаунчере версии <strong>1.21+</strong>.</p>
       </div>
 
-      <!-- Шаг 3 -->
       <div class="step-card">
         <div class="step-number">3</div>
         <h3>Добавь сервер</h3>

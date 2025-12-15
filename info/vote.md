@@ -13,7 +13,6 @@
 
 <div class="rewards-grid">
   
-  <!-- Награда 1 -->
   <div class="reward-card">
     <div class="icon-box coin">💰</div>
     <div class="info">
@@ -22,7 +21,6 @@
     </div>
   </div>
 
-  <!-- Награда 2 -->
   <div class="reward-card">
     <div class="icon-box key">🔑</div>
     <div class="info">
@@ -31,7 +29,6 @@
     </div>
   </div>
 
-  <!-- Награда 3 -->
   <div class="reward-card">
     <div class="icon-box exp">✨</div>
     <div class="info">
@@ -89,7 +86,6 @@
   flex-shrink: 0;
 }
 
-/* Цвета иконок */
 .coin { background: rgba(250, 204, 21, 0.15); color: #facc15; }
 .key { background: rgba(168, 85, 247, 0.15); color: #a855f7; }
 .exp { background: rgba(16, 185, 129, 0.15); color: #10b981; }

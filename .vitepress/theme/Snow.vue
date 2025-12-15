@@ -4,17 +4,15 @@ import { onMounted, ref } from 'vue'
 const flakes = ref([])
 
 onMounted(() => {
-  // Настройки
-  const count = 50 // Количество снежинок (не ставь больше 100, чтобы не лагало)
+  const count = 50
   
-  // Генерируем случайные параметры для каждой снежинки
   flakes.value = Array.from({ length: count }).map(() => ({
     style: {
-      left: Math.random() * 100 + 'vw', // Случайная позиция по горизонтали
-      animationDuration: 5 + Math.random() * 10 + 's', // Скорость падения (от 5 до 15 сек)
-      animationDelay: Math.random() * 5 + 's', // Случайная задержка старта
-      opacity: 0.3 + Math.random() * 0.5, // Прозрачность
-      size: 4 + Math.random() * 6 + 'px' // Размер от 4px до 10px
+      left: Math.random() * 100 + 'vw',
+      animationDuration: 5 + Math.random() * 10 + 's',
+      animationDelay: Math.random() * 5 + 's',
+      opacity: 0.3 + Math.random() * 0.5,
+      size: 4 + Math.random() * 6 + 'px'
     }
   }))
 })
@@ -45,8 +43,8 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* ВАЖНО: чтобы сквозь снег можно было кликать */
-  z-index: 9999; /* Поверх всего */
+  pointer-events: none;
+  z-index: 9999;
   overflow: hidden;
 }
 
@@ -54,19 +52,18 @@ onMounted(() => {
   position: absolute;
   top: -20px;
   background: white;
-  border-radius: 0; /* Квадратные (Minecraft style) */
+  border-radius: 0;
   animation-name: fall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-/* Анимация падения */
 @keyframes fall {
   0% {
     transform: translateY(-20px) translateX(0);
   }
   100% {
-    transform: translateY(105vh) translateX(20px); /* Падает вниз и чуть вбок */
+    transform: translateY(105vh) translateX(20px);
   }
 }
 </style>

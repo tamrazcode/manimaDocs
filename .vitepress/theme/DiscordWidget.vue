@@ -2,9 +2,8 @@
 import { ref, onMounted } from 'vue'
 
 const online = ref('...')
-// ID твоего сервера Discord (можно взять в настройках виджета в самом Дискорде)
-const serverId = '232904394620928012' // <--- ЗАМЕНИ НА СВОЙ ID
-const inviteLink = 'https://discord.gg/XSPUjWz' // Твоя ссылка
+const serverId = '232904394620928012'
+const inviteLink = 'https://discord.gg/XSPUjWz'
 
 onMounted(async () => {
   try {
@@ -51,7 +50,7 @@ onMounted(async () => {
 
 .btn {
   display: block;
-  background: #5865F2; /* Цвет Дискорда */
+  background: #5865F2;
   color: white !important;
   padding: 8px;
   border-radius: 8px;

@@ -11,9 +11,7 @@ const updateMouse = (e) => {
   y.value = e.clientY
 }
 
-// Плавное движение (Lerp)
 const animate = () => {
-  // Курсор "догоняет" мышку. Чем меньше 0.15, тем медленнее
   trailingX.value += (x.value - trailingX.value) * 0.15
   trailingY.value += (y.value - trailingY.value) * 0.15
   
@@ -34,40 +32,36 @@ onUnmounted(() => {
   <div class="custom-cursor" 
        :style="{ left: trailingX + 'px', top: trailingY + 'px' }">
   </div>
-  <!-- Фоновый эффект (пятно света) -->
   <div class="cursor-glow"
        :style="{ left: trailingX + 'px', top: trailingY + 'px' }">
   </div>
 </template>
 
 <style scoped>
-/* Сам кружок */
 .custom-cursor {
   position: fixed;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--vp-c-brand-1); /* Твой розовый цвет */
+  border: 2px solid var(--vp-c-brand-1);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  pointer-events: none; /* Чтобы можно было кликать сквозь него */
+  pointer-events: none;
   z-index: 9999;
-  transition: width 1s, height 0.9s; /* Анимация при кликах если захочешь */
+  transition: width 1s, height 0.9s;
 }
 
-/* Эффект свечения на фоне */
 .cursor-glow {
   position: fixed;
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, var(--vp-c-brand-1) 0%, transparent 70%);
-  opacity: 0.09; /* Очень слабое свечение */
+  opacity: 0.09;
   transform: translate(-50%, -50%);
   pointer-events: none;
-  z-index: 0; /* На самом дне, под текстом */
+  z-index: 0;
   filter: blur(40px);
 }
 
-/* Скрываем на мобильных, там нет мышки */
 @media (max-width: 768px) {
   .custom-cursor, .cursor-glow { display: none; }
 }

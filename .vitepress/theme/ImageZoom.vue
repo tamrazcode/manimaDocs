@@ -7,7 +7,6 @@ const route = useRoute()
 
 const initZoom = () => {
   nextTick(() => {
-    // Применяем зум ко всем картинкам в статьях, кроме логотипов
     mediumZoom('.main img', { background: 'rgba(0,0,0,0.8)' })
   })
 }

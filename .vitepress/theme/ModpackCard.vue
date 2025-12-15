@@ -2,7 +2,6 @@
   <div class="modpack-wrapper">
     <div class="modpack-card">
       
-      <!-- Левая часть: Текст -->
       <div class="content">
         <div class="badges">
           <span class="badge new">Рекомендуем</span>
@@ -23,14 +22,12 @@
         </div>
       </div>
 
-      <!-- Правая часть: Кнопки -->
             <div class="action">
               <a href="https://modrinth.com/" target="_blank" class="download-btn">
                 <span>Скачать сборку</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
               </a>
               
-              <!-- 👇 НОВАЯ КНОПКА 👇 -->
               <a href="/info/modpack" class="install-link">
                 Как установить? <span class="arrow">→</span>
               </a>
@@ -38,7 +35,6 @@
               <div class="sub-text">Fabric 1.21.8 • Установка в 2 клика</div>
             </div>
 
-      <!-- Декоративный фон (пятно света) -->
       <div class="glow-bg"></div>
     </div>
   </div>
@@ -47,7 +43,7 @@
 <style scoped>
 .modpack-wrapper {
   padding: 0 24px;
-  margin-bottom: 80px; /* Отступ до FAQ */
+  margin-bottom: 80px;
   display: flex;
   justify-content: center;
 }
@@ -68,7 +64,6 @@
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
 }
 
-/* Адаптив для телефонов */
 @media (max-width: 768px) {
   .modpack-card {
     flex-direction: column;
@@ -80,7 +75,6 @@
   .badges { justify-content: center; }
 }
 
-/* Текстовая часть */
 .content {
   position: relative;
   z-index: 2;
@@ -130,7 +124,6 @@ p {
   max-width: 500px;
 }
 
-/* Список фишек */
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +142,6 @@ p {
   gap: 6px;
 }
 
-/* Кнопка и правая часть */
 .action {
   position: relative;
   z-index: 2;
@@ -185,7 +177,6 @@ p {
   font-weight: 500;
 }
 
-/* Эффект свечения на фоне */
 .glow-bg {
   position: absolute;
   top: 0;
@@ -204,43 +195,41 @@ p {
     opacity: 1;
   }
   35% {
-    transform: translateY(5px); /* Улетает вниз */
-    opacity: 0;                 /* Исчезает */
+    transform: translateY(5px);
+    opacity: 0;
   }
   40% {
-    transform: translateY(-5px); /* Телепортируется наверх (невидимой) */
+    transform: translateY(-5px);
     opacity: 0;
   }
   100% {
-    transform: translateY(0);    /* Возвращается в центр */
-    opacity: 1;                  /* Появляется */
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-/* 2. Применяем анимацию при наведении на кнопку */
 .download-btn:hover svg {
-  /* 0.6s - длительность, ease - плавность */
   animation: downloadArrow 0.6s ease; 
 }
 
 .install-link {
   font-size: 14px;
   font-weight: 600;
-  color: var(--vp-c-text-2); /* Серый цвет */
+  color: var(--vp-c-text-2);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 5px;
   transition: color 0.2s;
-  margin-top: 5px; /* Чуть отступа от кнопки скачивания */
+  margin-top: 5px;
 }
 
 .install-link:hover {
-  color: var(--vp-c-brand-1); /* Розовый при наведении */
+  color: var(--vp-c-brand-1);
 }
 
 .install-link:hover .arrow {
-  transform: translateX(3px); /* Стрелочка уезжает вправо */
+  transform: translateX(3px);
 }
 
 .arrow {

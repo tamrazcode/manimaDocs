@@ -1,5 +1,4 @@
 :root {
-  /* --- ПАСТЕЛЬНО-РОЗОВАЯ ТЕМА --- */
   
   /* Основной цвет (Нежный розовый) - Кнопки, ссылки */
   --vp-c-brand-1: #f472b6; 
@@ -15,31 +14,26 @@
   
   --vp-c-brand-4: rgb(223, 223, 214);
 
-  /* --- СТЕКЛО В ХЕДЕРЕ --- */
   --vp-nav-bg-color: var(--vp-c-bg);
 }
 
 .home .VPNavBar {
-  background-color: rgba(255, 255, 255, 0.6) !important; /* Прозрачный белый */
+  background-color: rgba(255, 255, 255, 0.6) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Тонкая линия */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Темная тема */
 .dark .home .VPNavBar {
-  background-color: rgba(27, 27, 31, 0.6) !important; /* Прозрачный черный */
+  background-color: rgba(27, 27, 31, 0.6) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* 3. Убираем "шум" от стекла на обычных страницах */
-/* Чтобы на Вики хедер был просто плоским и чистым */
 .VPNavBar {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
 
-/* --- АНИМАЦИЯ КНОПКИ COPY IP (Оставляем, она была крутой) --- */
 .VPButton[href="#copy"] {
   position: relative;
   overflow: hidden;
@@ -78,13 +72,11 @@
 .VPButton[href="#copy"]:hover::before { transform: translateY(100%); }
 .VPButton[href="#copy"]:hover::after { top: 0; }
 
-/* --- 2. ФИКС ГАЛЕРЕИ (ЧТОБЫ КАРТИНКА БЫЛА ПОВЕРХ ВСЕГО) --- */
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-  z-index: 10000 !important; /* Ставим выше, чем навбар (у него обычно 20-50) */
+  z-index: 10000 !important;
 }
 
-/* --- УВЕЛИЧЕНИЕ КАРТИНКИ НА ГЛАВНОЙ --- */
 .VPHomeHero .image-src {
   max-width: 700px !important; 
   max-height: 700px !important;
@@ -114,26 +106,21 @@
   }
 }
 
-/* --- ИСПРАВЛЕНИЕ ЛИНИИ ФУТЕРА --- */
 .VPFooter {
   border-top: 1px solid var(--vp-c-divider) !important;
 
   background-color: transparent !important;
 }
 
-/* Разрешаем онлайну встать рядом с кнопками */
 .VPHomeHero .actions {
-  position: relative; /* Теперь онлайн будет отсчитываться от кнопок */
+  position: relative;
 }
 
-/* --- ЛОГИКА НАСТРОЕК САЙТА --- */
 
-/* Если включен класс no-snow, скрываем контейнер снега */
 body.no-snow .snow-container {
   display: none !important;
 }
 
-/* Если включен класс no-cursor, скрываем кастомный курсор и его свечение */
 body.no-cursor .custom-cursor,
 body.no-cursor .cursor-glow {
   display: none !important;

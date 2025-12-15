@@ -5,15 +5,11 @@ const isOpen = ref(false)
 const snowEnabled = ref(true)
 const cursorEnabled = ref(true)
 
-// Функция, которая применяет настройки к сайту
 const applySettings = () => {
-  // Если снег ВЫКЛЮЧЕН, добавляем класс no-snow, иначе убираем
   document.body.classList.toggle('no-snow', !snowEnabled.value)
-  // То же самое для курсора
   document.body.classList.toggle('no-cursor', !cursorEnabled.value)
 }
 
-// Сохранение в память браузера
 const toggleSnow = () => {
   snowEnabled.value = !snowEnabled.value
   localStorage.setItem('manima_snow', snowEnabled.value)
@@ -26,12 +22,10 @@ const toggleCursor = () => {
   applySettings()
 }
 
-// При загрузке сайта читаем настройки
 onMounted(() => {
   const savedSnow = localStorage.getItem('manima_snow')
   const savedCursor = localStorage.getItem('manima_cursor')
 
-  // Если настроек нет (первый заход), считаем что всё включено (true)
   if (savedSnow !== null) snowEnabled.value = savedSnow === 'true'
   if (savedCursor !== null) cursorEnabled.value = savedCursor === 'true'
 
@@ -42,7 +36,6 @@ onMounted(() => {
 <template>
   <div class="settings-wrapper">
     
-    <!-- Кнопка шестеренки -->
     <button 
       class="settings-btn" 
       :class="{ active: isOpen }" 
@@ -55,7 +48,6 @@ onMounted(() => {
       </svg>
     </button>
 
-    <!-- Выпадающее меню -->
     <Transition name="pop">
       <div v-if="isOpen" class="settings-menu">
         <div class="menu-title">Настройки вида</div>
@@ -87,7 +79,6 @@ onMounted(() => {
   z-index: 99999;
 }
 
-/* Кнопка шестеренки */
 .settings-btn {
   width: 48px;
   height: 48px;
@@ -109,7 +100,6 @@ onMounted(() => {
   transform: rotate(45deg);
 }
 
-/* Меню */
 .settings-menu {
   position: absolute;
   bottom: 60px;
@@ -121,7 +111,6 @@ onMounted(() => {
   padding: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   
-  /* Стекло */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -135,7 +124,6 @@ onMounted(() => {
   letter-spacing: 0.5px;
 }
 
-/* Строка переключателя */
 .toggle-row {
   display: flex;
   justify-content: space-between;
@@ -150,7 +138,6 @@ onMounted(() => {
   font-weight: 500;
 }
 
-/* Свитч (Тумблер) */
 .switch {
   width: 44px;
   height: 24px;
@@ -161,7 +148,7 @@ onMounted(() => {
 }
 
 .switch.on {
-  background: var(--vp-c-brand-1); /* Розовый когда включено */
+  background: var(--vp-c-brand-1);
 }
 
 .knob {
@@ -180,7 +167,6 @@ onMounted(() => {
   transform: translateX(20px);
 }
 
-/* Анимация появления меню */
 .pop-enter-active,
 .pop-leave-active {
   transition: all 0.2s ease;

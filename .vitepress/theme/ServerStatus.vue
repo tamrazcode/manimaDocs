@@ -11,10 +11,10 @@ const fetchOnline = async () => {
     
     if (data.online) {
       online.value = `${data.players.online} игроков онлайн`
-      statusColor.value = '#10b981' // Зеленый
+      statusColor.value = '#10b981'
     } else {
       online.value = 'Сервер выключен'
-      statusColor.value = '#ef4444' // Красный
+      statusColor.value = '#ef4444'
     }
   } catch (e) {
     online.value = 'Сервер недоступен'
@@ -41,7 +41,6 @@ onMounted(fetchOnline)
   font-size: 14px;
   color: var(--vp-c-text-2);
   
-  /* Анимация появления */
   animation: fade-in 1s ease;
 }
 
@@ -64,9 +63,7 @@ onMounted(fetchOnline)
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- НАСТРОЙКА ПОЗИЦИИ --- */
 
-/* На мобильных (телефонах) оставляем снизу, так красивее */
 @media (max-width: 639px) {
   .server-status {
     margin-top: 20px;
@@ -74,22 +71,15 @@ onMounted(fetchOnline)
   }
 }
 
-/* На планшетах и ПК ставим СПРАВА от кнопок */
 @media (min-width: 960px) {
   .server-status {
-    /* Вырываем из потока и ставим руками */
     position: absolute; 
     
-    /* Подбираем координаты (зависит от длины текста кнопок) */
-    /* Если наедет на кнопки - увеличивай left */
     left: 310px; 
-    bottom: 12px; /* Выравниваем по высоте кнопок */
+    bottom: 12px;
     
-    /* Убираем лишние отступы */
     margin: 0;
   }
   
-  /* Нужно добавить relative родителю, чтобы позиция работала корректно */
-  /* Это делается через глобальный CSS, см. шаг ниже */
 }
 </style>

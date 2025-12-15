@@ -127,7 +127,7 @@ font-weight: 600;
 
 .step-card p {
 margin: 0;
-color: var(--vp-c-text-2); /* Серый текст */
+color: var(--vp-c-text-2);
 line-height: 1.6;
 }
 

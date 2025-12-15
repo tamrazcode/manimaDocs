@@ -2,7 +2,6 @@ import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
-// Импорты компонентов
 import Snow from './Snow.vue'
 import CopyNotification from './CopyNotification.vue'
 import HeroBadge from './HeroBadge.vue'

@@ -10,12 +10,10 @@ const voteSites = [
   <div class="vote-container">
     <div class="vote-card">
       
-      <!-- ФОНОВЫЕ ЭФФЕКТЫ -->
       <div class="glow-spot top-left"></div>
       <div class="glow-spot bottom-right"></div>
       <div class="noise-texture"></div>
 
-      <!-- ЛЕВАЯ ЧАСТЬ -->
       <div class="vote-content">
         <div class="header-row">
           <h2>Голосуй за сервер</h2>
@@ -23,7 +21,6 @@ const voteSites = [
         
         <p>Поддержи нас и получай <strong>подарки в игре</strong> ежедневно.</p>
         
-        <!-- НОВЫЙ БЛОК: КНОПКИ + ССЫЛКА В ОДНУ СТРОКУ -->
         <div class="actions-row">
           
           <div class="buttons-group">
@@ -33,10 +30,8 @@ const voteSites = [
             </a>
           </div>
 
-          <!-- Вертикальный разделитель -->
           <div class="divider"></div>
 
-          <!-- Ссылка-подсказка -->
           <a href="/info/vote" class="info-link" title="Узнать подробнее">
             <span class="info-icon">?</span>
             <span class="link-text">Награда</span>
@@ -45,7 +40,6 @@ const voteSites = [
         </div>
       </div>
 
-      <!-- ПРАВАЯ ЧАСТЬ -->
       <div class="vote-visual">
         <div class="gift">🎁</div>
       </div>
@@ -57,7 +51,7 @@ const voteSites = [
 <style scoped>
 .vote-container {
   padding: 0 24px;
-  margin-bottom: 60px; /* Уменьшил внешний отступ */
+  margin-bottom: 60px;
   display: flex;
   justify-content: center;
 }
@@ -69,9 +63,8 @@ const voteSites = [
   overflow: hidden;
   background-color: #161618; 
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px; /* Чуть меньше скругление */
+  border-radius: 24px;
   
-  /* 👇 КОМПАКТНЫЕ ОТСТУПЫ */
   padding: 30px 40px; 
   
   display: flex;
@@ -81,7 +74,6 @@ const voteSites = [
   box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-/* ФОН */
 .glow-spot {
   position: absolute;
   width: 300px;
@@ -101,7 +93,6 @@ const voteSites = [
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-/* КОНТЕНТ */
 .vote-content { position: relative; z-index: 2; flex: 1; }
 
 .header-row {
@@ -112,7 +103,7 @@ const voteSites = [
 }
 
 h2 {
-  font-size: 28px; /* Уменьшил шрифт */
+  font-size: 28px;
   font-weight: 800;
   color: var(--vp-c-brand-4);
   margin: 0;
@@ -132,14 +123,13 @@ h2 {
 }
 
 p {
-  font-size: 15px; /* Уменьшил шрифт */
+  font-size: 15px;
   color: #a1a1aa;
-  margin: 0 0 25px 0; /* Меньше отступ до кнопок */
+  margin: 0 0 25px 0;
   max-width: 600px;
 }
 strong { color: var(--vp-c-brand-4); }
 
-/* --- НОВАЯ СТРОКА ДЕЙСТВИЙ (Кнопки + Ссылка) --- */
 .actions-row {
   display: flex;
   align-items: center;
@@ -157,7 +147,7 @@ strong { color: var(--vp-c-brand-4); }
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px; /* Компактные кнопки */
+  padding: 8px 16px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 10px;
@@ -178,14 +168,12 @@ strong { color: var(--vp-c-brand-4); }
   transform: translateY(-2px);
 }
 
-/* Разделитель */
 .divider {
   width: 1px;
   height: 24px;
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Ссылка-инфо */
 .info-link {
   display: flex;
   align-items: center;
@@ -217,7 +205,6 @@ strong { color: var(--vp-c-brand-4); }
   background: rgba(255,255,255,0.05);
 }
 
-/* ВИЗУАЛ */
 .vote-visual {
   position: relative;
   z-index: 2;
@@ -225,7 +212,7 @@ strong { color: var(--vp-c-brand-4); }
 
 .gift {
     width: 150px;
-  font-size: 100px; /* Чуть меньше подарок */
+  font-size: 100px;
   filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5));
   animation: float 4s ease-in-out infinite;
 }
@@ -235,7 +222,6 @@ strong { color: var(--vp-c-brand-4); }
   50% { transform: translateY(-10px) rotate(5deg); }
 }
 
-/* АДАПТИВ */
 @media (max-width: 860px) {
   .vote-card { flex-direction: column-reverse; padding: 30px 20px; text-align: center; }
   .header-row { justify-content: center; }

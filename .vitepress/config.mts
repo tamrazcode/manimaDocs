@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   appearance: 'dark', 
 
@@ -30,7 +29,6 @@ export default defineConfig({
           label: 'Содержание',
         },
     logo: '/logo.svg',
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Главная', link: '/' },
       { text: 'Википедия', link: '/wiki/' },
@@ -38,12 +36,10 @@ export default defineConfig({
       { text: 'Магазин', link: 'https://shop.manima.ru', target: '_blank' }
     ],
 
-    // Боковое меню
         sidebar: [
           {
-            text: 'ГЛАВНАЯ', // Заголовок группы
+            text: 'ГЛАВНАЯ',
             items: [
-              // Ссылка на wiki/index.md
               { text: '🩷 Manima Wiki', link: '/wiki/' } 
             ]
           },
@@ -79,7 +75,6 @@ export default defineConfig({
             text: ' ПОДДЕРЖКА',
             items: [
               { text: '📈 Мониторинги', link: '/support/monitoring' },
-              // Ссылка, которая ведет обратно на главную страницу лендинга
               { text: '🌐 Вернуться на сайт', link: '/' } 
             ]
           }

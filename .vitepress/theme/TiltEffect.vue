@@ -1,13 +1,12 @@
 <script setup>
 import { onMounted, onUnmounted, nextTick, watch } from 'vue'
-import { useRoute } from 'vitepress' // Импортируем роутер
+import { useRoute } from 'vitepress'
 import VanillaTilt from 'vanilla-tilt'
 
-const route = useRoute() // Получаем текущую страницу
+const route = useRoute()
 
 const initTilt = () => {
   nextTick(() => {
-    // Ждем чуть дольше, чтобы Vue успел отрисовать карточки
     setTimeout(() => {
       const cards = document.querySelectorAll('.VPFeature, .VPTeamMembersItem, .step-card')
       if (cards.length > 0) {
@@ -23,13 +22,10 @@ const initTilt = () => {
   })
 }
 
-// Запускаем при первой загрузке
 onMounted(() => {
   initTilt()
 })
 
-// СЛЕДИМ ЗА ИЗМЕНЕНИЕМ СТРАНИЦЫ
-// Как только route.path поменялся — перезапускаем эффект
 watch(() => route.path, () => {
   initTilt()
 })
@@ -41,5 +37,4 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <!-- Этот компонент невидимый, он просто запускает скрипт -->
 </template>
