@@ -6,18 +6,21 @@ const statusColor = ref('gray')
 
 const fetchOnline = async () => {
   try {
-    const response = await fetch('https://api.mcstatus.io/v2/status/java/mc.manima.ru')
+    // Используем API mcsrvstat.us (он надежнее)
+    const response = await fetch('https://api.mcsrvstat.us/2/mc.manima.ru')
     const data = await response.json()
     
+    // У этого API поле называется data.online (true/false)
     if (data.online) {
       online.value = `${data.players.online} игроков онлайн`
-      statusColor.value = '#10b981'
+      statusColor.value = '#10b981' // Зеленый
     } else {
       online.value = 'Сервер выключен'
-      statusColor.value = '#ef4444'
+      statusColor.value = '#ef4444' // Красный
     }
   } catch (e) {
-    online.value = 'Сервер недоступен'
+    online.value = 'Не удалось получить статус'
+    statusColor.value = '#ef4444'
   }
 }
 
