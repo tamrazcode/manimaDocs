@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.DfL_BkQ-.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"features/skins.md","filePath":"features/skins.md"}'),a={name:"features/skins.md"};function r(n,o,c,i,f,p){return s(),t("div")}const m=e(a,[["render",r]]);export{d as __pageData,m as default};

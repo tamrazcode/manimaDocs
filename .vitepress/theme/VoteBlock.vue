@@ -7,7 +7,7 @@ const voteSites = [
 </script>
 
 <template>
-  <div class="vote-container">
+  <div class="vote-container reveal-up">
     <div class="vote-card">
       
       <div class="glow-spot top-left"></div>

@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DfL_BkQ-.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"features/tags.md","filePath":"features/tags.md"}'),s={name:"features/tags.md"};function r(o,c,n,f,p,_){return a(),t("div")}const m=e(s,[["render",r]]);export{i as __pageData,m as default};

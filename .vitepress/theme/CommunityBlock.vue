@@ -6,16 +6,16 @@ const skinUrl = '/images/hero-skin.png'
 
 const phrasesPool = [
   { icon: '💍', text: 'Свадьбы' },
-  { icon: '🛡️', text: 'Без вайпов' },
+  { icon: '🛡️', text: 'Сезоны' },
   { icon: '🏰', text: 'Кланы' },
-  { icon: '⚔️', text: 'PvP Арена' },
+  { icon: '💬', text: 'Социальность' },
   { icon: '🤝', text: 'Торговля' },
   { icon: '🎨', text: 'Рисование' },
   { icon: '🎉', text: 'Ивенты' },
   { icon: '👋', text: 'Эмоции' },
   { icon: '🎙️', text: 'Голосовой чат' },
   { icon: '👑', text: 'Титулы' },
-  { icon: '🐲', text: 'Данжи' },
+  { icon: '📃', text: 'Профили' },
   { icon: '☕', text: 'Напитки' }
 ]
 
@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="community-wrapper">
+<div class="community-wrapper reveal-up">
     <div class="community-card">
       
       <div class="text-side">

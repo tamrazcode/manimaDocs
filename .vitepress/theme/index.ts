@@ -11,6 +11,7 @@ import DiscordWidget from './DiscordWidget.vue'
 import CustomCursor from './CustomCursor.vue'
 import ImageZoom from './ImageZoom.vue'
 import SiteSettings from './SiteSettings.vue'
+import ScrollObserver from './ScrollObserver.vue'
 
 export default {
   extends: DefaultTheme,
@@ -25,6 +26,7 @@ export default {
         h(CustomCursor),
         h(ImageZoom),
         h(SiteSettings),
+        h(ScrollObserver),
       ],
 
       'home-hero-info-before': () => h(HeroBadge),

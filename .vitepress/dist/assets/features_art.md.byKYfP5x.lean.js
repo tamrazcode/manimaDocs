@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DfL_BkQ-.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"features/art.md","filePath":"features/art.md"}'),r={name:"features/art.md"};function s(o,c,n,f,p,_){return a(),t("div")}const m=e(r,[["render",s]]);export{i as __pageData,m as default};

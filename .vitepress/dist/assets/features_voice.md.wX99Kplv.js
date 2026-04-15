@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.DfL_BkQ-.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"features/voice.md","filePath":"features/voice.md"}'),o={name:"features/voice.md"};function r(c,s,n,i,f,p){return a(),t("div")}const m=e(o,[["render",r]]);export{d as __pageData,m as default};

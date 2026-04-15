@@ -7,19 +7,19 @@
     
     <div class="steps-grid">
       
-      <div class="step-card">
+      <div class="step-card reveal-up">
         <div class="step-number">1</div>
         <h3>Ознакомься с правилами</h3>
         <p>Мы стремимся создать безопасное место для общения и игры.</p>
       </div>
 
-      <div class="step-card">
+      <div class="step-card reveal-up delay-100">
         <div class="step-number">2</div>
         <h3>Скачай майнкрафт</h3>
         <p>Можно играть без лицензии и на любом лаунчере версии <strong>1.21+</strong>.</p>
       </div>
 
-      <div class="step-card">
+      <div class="step-card reveal-up delay-200">
         <div class="step-number">3</div>
         <h3>Добавь сервер</h3>
         <p>

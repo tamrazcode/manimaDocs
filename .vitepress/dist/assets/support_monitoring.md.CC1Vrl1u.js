@@ -1,0 +1,1 @@
+import{_ as t,c as o,o as e}from"./chunks/framework.DfL_BkQ-.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"support/monitoring.md","filePath":"support/monitoring.md"}'),r={name:"support/monitoring.md"};function n(a,s,i,p,c,m){return e(),o("div")}const f=t(r,[["render",n]]);export{d as __pageData,f as default};

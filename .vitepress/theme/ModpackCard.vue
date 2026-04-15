@@ -1,5 +1,5 @@
 <template>
-  <div class="modpack-wrapper">
+  <div class="modpack-wrapper reveal-up">
     <div class="modpack-card">
       
       <div class="content">
